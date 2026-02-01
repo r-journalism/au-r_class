@@ -4,13 +4,10 @@ format: html
 editor: visual
 ---
 
-
-
 ```{r, include = F}
 library(tidyverse)
 library(lubridate)
 ```
-
 
 ```{r bobsog}
 
@@ -36,7 +33,6 @@ ggplot(burgers, aes(x=where, y=time, fill=employee)) +
   geom_col(position="stack") 
 ```
 
-
 ```{r bobs2, warning=F, message=F, include=F, fig.height=3}
 burgers
 
@@ -53,7 +49,6 @@ ggplot(burgers, aes(x=employee, y=time, fill=employee)) +
   ggplot(burgers) + 
     geom_point(aes(x=employee, y=time, fill=employee))
 ```
-
 
 ```{r bobs3c, warning=F, message=F}
   ggplot(burgers) + 
@@ -72,21 +67,19 @@ ggplot(burgers, aes(x=employee, y=time, fill=employee)) +
 
 ```
 
-
 ```{r bobs4b, warning=F, message=F}
   ggplot(burgers) + 
     geom_col(aes(x=time, y=employee), stat="identity")
 
 ```
 
----
+------------------------------------------------------------------------
 
 ```{r disney}
 disney <- read_csv("../slides_data/disney_movies_total_gross.csv")
 
 glimpse(disney)
 ```
-
 
 ```{r adjust}
 disney <- disney |> 
@@ -96,7 +89,8 @@ disney <- disney |>
 
 glimpse(disney)
 ```
----
+
+------------------------------------------------------------------------
 
 ```{r disney3, warning=F, message=F}
 disney |> 
@@ -106,7 +100,6 @@ disney |>
   geom_point() 
 ```
 
-
 ```{r disney4, warning=F, message=F}
 disney |> 
   ggplot(aes(x=release_date, 
@@ -115,7 +108,6 @@ disney |>
   geom_point() +
   scale_x_date(limits=c(ymd("1980-01-01"), ymd("2020-01-01")))
 ```
-
 
 ```{r disney5, warning=F, message=F}
 disney |> 
@@ -128,7 +120,6 @@ disney |>
   scale_y_continuous(limits=c(0, 1000000000)) 
 
 ```
-
 
 ```{r disney6, warning=F, message=F}
 disney |> 
@@ -144,7 +135,6 @@ disney |>
 
 ```
 
-
 ```{r disney7, warning=F, message=F}
 disney |> 
   ggplot(aes(x=release_date, 
@@ -158,7 +148,6 @@ disney |>
   facet_wrap(~genre)
 
 ```
-
 
 ```{r disney7a, warning=F, message=F}
 disney |> 
@@ -177,7 +166,6 @@ disney |>
   labs(caption="Data: Source Goes Here")
 
 ```
-
 
 ```{r disney8, warning=F, message=F}
 disney |> 
@@ -198,6 +186,5 @@ disney |>
   theme(legend.key = element_rect(fill = "white", colour = "black")) +
   theme_minimal()
 ```
----
 
-
+------------------------------------------------------------------------

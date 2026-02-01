@@ -22,87 +22,87 @@ sample_df
 sample_df$race
 
 
-``` 
+```
 
 ```{r}
 
 as.character(sample_df$race)
 
 
-```  
+```
 
 ```{r}
 sample_df$name
 
-```  
+```
 
 ```{r}
 as.factor(sample_df$race)
 
-```  
+```
 
 ```{r}
 sample_df$race
 
-```  
+```
 
 ```{r}
 as.character(sample_df$race)
 
-```  
+```
 
 ```{r}
 sample_df$name
 
 
-```  
+```
 
 ```{r}
 as.factor(sample_df$race)
 
 
-```  
+```
 
 ```{r}
 sample_df$id
 
-```  
+```
 
 ```{r}
 as.numeric(sample_df$id)
 
-```  
+```
 
 ```{r}
 sample_df$id
 
-```  
+```
 
 ```{r}
 as.numeric(sample_df$id)
 
-```  
+```
 
 ```{r}
 as.numeric(as.character(sample_df$id))
 
-```  
+```
 
 ```{r}
 
 
-```  
+```
 
 ```{r}
 vec1 <- c(1,4,6,8,10)
 vec1
 
-```  
+```
 
 ```{r}
 vec1[4]
 
-```  
+```
 
 ```{r}
 
@@ -114,43 +114,43 @@ status <- c(1,2,3,1)
 
 patientdata <- data.frame(patientID, age, sex, diabetes, status)
 
-```  
+```
 
 ```{r}
 patientdata[2,4]
 
-```  
+```
 
 ```{r}
 patientdata[,4]
 
-```  
+```
 
 ```{r}
 patientdata[,3:4]
 
-```  
+```
 
 ```{r}
 patientdata[c("diabetes", "status")]
 
 
-```  
+```
 
 ```{r}
 patientdata$age
 
-```  
+```
 
 ```{r}
 mean(patientdata$age)
 
-```  
+```
 
 ```{r}
 library(readr)
 
-```  
+```
 
 ```{r}
 
@@ -158,49 +158,49 @@ df <- read_csv("https://www.andrewbatran.com/data/Admissions_to_DMHAS_Addiction_
 
 df
 
-```  
+```
 
 ```{r}
 write_csv(df_csv, "data/transformed_data.csv")
 
-```  
+```
 
 ```{r}
 write_csv(df_csv, "data/transformed_data.csv", na="")
 
-```  
+```
 
 ```{r}
 library(readxl)
 
-```  
+```
 
 ```{r}
 df_xl <- read_excel("data/StatisticsSummary.xls", sheet=1)
 
-```  
+```
 
 ```{r}
 View(df_xl)
 
 df_xl <- read_excel("data/StatisticsSummary.xls", sheet=1, skip=2)
 
-```  
+```
 
 ```{r}
 colnames(df_xl)
 
-```  
+```
 
 ```{r}
 head(df_xl$Other Cases)
 
-```  
+```
 
 ```{r}
 head(df_xl$`Other Cases`)
 
-```  
+```
 
 ```{r}
 library(janitor)
@@ -209,7 +209,7 @@ df_xl <- clean_names(df_xl)
 
 colnames(df_xl)
 
-```  
+```
 
 ```{r}
 

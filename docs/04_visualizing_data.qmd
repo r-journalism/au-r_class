@@ -1,5 +1,5 @@
 ---
-title: "Joining and Tidying<br /><br /><br />"
+title: "Visualizing data<br /><br /><br />"
 author: "American University Data Journalism"
 format:
   revealjs: 
